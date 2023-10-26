@@ -6,13 +6,7 @@ var xlsx = require('node-xlsx');
 const factor = require('../config/factor.constants');
 const scope = require('../config/scope.emission');
 
-const Schema = mongoose.Schema;///////////////////////
-const CategorySchema = new Schema({
-    title: String,
-    details: [String],
-});
 
-const Category = mongoose.model('categories', CategorySchema);
 const storage = multer.diskStorage({
     destination(req, file, callback) {
         callback(null, './uploads/');
@@ -56,10 +50,6 @@ router.route('/load-scope').get((req, res) => {
     return res.send(scope)
 })
 
-router.route('/calculation').get(async (req, res) => {
-    const categories = await Category.find();
-    return res.send(categories)
-})
 
 //Uploading CSV
 router.route('/read-file').post((req, res) => {
