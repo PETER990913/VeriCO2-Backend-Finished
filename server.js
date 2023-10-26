@@ -8,15 +8,15 @@ router = express.Router()
 
 app.use(cors());
 app.use('/', ExcelRoute)
-const Schema = mongoose.Schema;///////////////////////
-const ObjectId = Schema.ObjectId;
+// const Schema = mongoose.Schema;///////////////////////
+// const ObjectId = Schema.ObjectId;
 
-const CategorySchema = new Schema({
-  title: String,
-  details: [String],
-});
+// const CategorySchema = new Schema({
+//   title: String,
+//   details: [String],
+// });
 
-const Category = mongoose.model('categories', CategorySchema);/////////////////////////
+// const Category = mongoose.model('categories', CategorySchema);/////////////////////////
 // parse requests of content-type - application/json
 app.use(express.json());
 
@@ -42,11 +42,11 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome to VeriCO2." });
 });
 
-app.get('/calculation', function(req, res) {///////////////////////////
-  Category.find().then((categories) => {
-      res.send(categories)
-  })
-})
+// app.get('/calculation', function(req, res) {///////////////////////////
+//   Category.find().then((categories) => {
+//       res.send(categories)
+//   })
+// })
 
 require("./routes/auth.route")(app);
 
