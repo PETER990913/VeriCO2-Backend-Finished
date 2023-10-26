@@ -42,7 +42,7 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome to VeriCO2." });
 });
 
-app.get('/api/calculation', function(req, res) {///////////////////////////
+app.get('/calculation', function(req, res) {///////////////////////////
   Category.find().then((categories) => {
       res.send(categories)
   })
