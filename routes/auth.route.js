@@ -9,7 +9,8 @@ module.exports = function(app) {
   //   next();
   // });
 
-  app.post("/api/signup",[],controller.signup);
+  // app.post("/api/signup",[],controller.signup);
+  app.post("/api/signup",controller.signup);
   app.post("/api/signin", controller.signin);
   app.post("/api/checkEmail", controller.checkEmail);
   app.post("/api/resetPassword", controller.resetPassword)
