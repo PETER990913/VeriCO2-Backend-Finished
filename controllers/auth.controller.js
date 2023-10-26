@@ -28,7 +28,7 @@ exports.signup = (req, res) => {
           })
           .catch(err => {
             // res.status(500).send({ errors: err.message, success: false, message: 'Something went wrong!' });
-            res.status(200).send({ success: false, message: 'Something went wrong!' });
+            res.status(200).send({ success: false, message: 'Something went wrong!', errors: err.message });
           });
       }
     })
