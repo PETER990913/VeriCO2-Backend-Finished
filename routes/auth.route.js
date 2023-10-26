@@ -9,8 +9,8 @@ module.exports = function(app) {
     next();
   });
 
-  app.post("/signup",[],controller.signup);
-  app.post("/signin", controller.signin);
-  app.post("/checkEmail", controller.checkEmail);
-  app.post("/resetPassword", controller.resetPassword)
+  app.post("/api/signup",[],controller.signup);
+  app.post("/api/signin", controller.signin);
+  app.post("/api/checkEmail", controller.checkEmail);
+  app.post("/api/resetPassword", controller.resetPassword)
   }
