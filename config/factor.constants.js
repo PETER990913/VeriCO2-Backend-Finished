@@ -1,5 +1,5 @@
 const factor = {
-    "cement":	0.52284,
+    "Cement":	0.52284,
     "Paint":	4,
     "Timber":	0.45,
     "Concrete":	0.042,
